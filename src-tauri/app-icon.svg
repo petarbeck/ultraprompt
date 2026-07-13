@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d1533"/>
+      <stop offset="0.55" stop-color="#0c0819"/>
+      <stop offset="1" stop-color="#050310"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#be87e5"/>
+      <stop offset="0.55" stop-color="#a062ce"/>
+      <stop offset="1" stop-color="#46299b"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect x="6" y="6" width="1012" height="1012" rx="218" fill="none" stroke="#a062ce" stroke-opacity="0.30" stroke-width="4"/>
+  <!-- bolt path bbox is x:4..19 (cx 11.5), y:2..22 (cy 12); center that on the canvas. -->
+  <g filter="url(#glow)" transform="translate(512,512) scale(31) translate(-11.5,-12)">
+    <path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="url(#bolt)"/>
+  </g>
+</svg>

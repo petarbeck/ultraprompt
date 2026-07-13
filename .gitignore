@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/
+
+# Local SQLite databases (dev)
+# NB: the app's runtime DB lives in the OS app-data dir, not the repo. These
+# patterns just make sure a stray dev DB (and its WAL/journal sidecars) can't
+# be committed.
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Claude Code local config — keep ONLY the dogfooded /ultraprompt command;
+# ignore personal settings/state (session-naming hook, settings.local.json, etc.)
+.claude/*
+!.claude/commands/
+
+# SDD progress ledger (scratch)
+.superpowers/
+
+# Internal design/plan/deferred-work notes — kept local, out of the public repo
+docs/superpowers/
+TODO.md
+
+# Throwaway Playwright + sql.js verification harness (not shipped)
+.harness/
+
+# Ultraprompt runtime queue/done (created in a project working dir)
+.ultraprompt/
+
+# tauri icon also emits mobile icons; this app is desktop-only
+src-tauri/icons/android/
+src-tauri/icons/ios/

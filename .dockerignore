@@ -1,0 +1,12 @@
+# Keep the Docker build context small and free of host-built (macOS) artifacts.
+.git
+node_modules
+src-tauri/target
+dist
+dist-linux
+.harness
+.claude
+.ultraprompt
+docs
+*.dmg
+*.app

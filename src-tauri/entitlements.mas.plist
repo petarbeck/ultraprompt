@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mac App Store (MAS) entitlements. Required only for the App Store build; a Developer-ID
+  distributed build does NOT use these (Tauri enables the hardened runtime automatically).
+
+  The security-scoped-bookmark code that makes the pipeline work under this sandbox is
+  implemented (src-tauri/src/bookmark.rs, projects.working_dir_bookmark, and the FS
+  commands' bookmark::access wrapper — see RELEASE.md §4). These entitlements enable the
+  sandbox + the folder/bookmark access the app relies on. Developer-ID builds don't use
+  this file and are un-sandboxed.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>com.apple.security.app-sandbox</key>
+  <true/>
+  <!-- Read/write the folders the user picks via the directory dialog (project working dirs, import). -->
+  <key>com.apple.security.files.user-selected.read-write</key>
+  <true/>
+  <!-- Persist access to picked folders across launches (needed by the pipeline). -->
+  <key>com.apple.security.files.bookmarks.app-scope</key>
+  <true/>
+</dict>
+</plist>

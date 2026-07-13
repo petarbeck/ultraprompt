@@ -1,0 +1,39 @@
+@import '@fontsource/archivo/500.css';
+@import '@fontsource/archivo/600.css';
+@import '@fontsource/archivo/700.css';
+@import '@fontsource/archivo/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/600.css';
+
+:root {
+  --up-bg:#050310; --up-bg-elev:#0c0819; --up-surface:#140e28; --up-surface-2:#1d1533;
+  --up-border:#241b3d; --up-border-strong:#33285a;
+  --up-ink:#eae4f2; --up-muted:#9a8fae; --up-dim:#6f6486;
+  --up-violet:#a062ce; --up-violet-bright:#be87e5; --up-indigo:#46299b; --up-violet-deep:#241241;
+  --up-orchid:#c65bd6; --up-orchid-glow:rgba(198,91,214,0.30);
+  --up-success:#6fb98a; --up-danger:#e4635e;
+  --up-btn:linear-gradient(160deg,var(--up-indigo),var(--up-violet-deep));
+  --up-btn-shadow:rgba(70,41,155,0.5);
+  --up-font-display:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
+  --up-font-sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --up-font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{margin:0;background:var(--up-bg);color:var(--up-ink);
+  font-family:var(--up-font-sans);font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow:hidden}
+h1,h2,h3{font-family:var(--up-font-display);font-weight:700;letter-spacing:-0.01em;margin:0}
+button{font-family:inherit}
+.eyebrow{font-family:var(--up-font-display);font-size:0.6rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:0.14em;color:var(--up-dim)}
+.mono{font-family:var(--up-font-mono);font-variant-numeric:tabular-nums}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--up-border-strong);border-radius:6px}
+/* Hide the native scrollbar on elements that use the custom OverlayScrollbar overlay.
+   (Native ::-webkit-scrollbar state styling is unreliable in WKWebView — see CLAUDE.md.) */
+.no-native-scrollbar{scrollbar-width:none}
+.no-native-scrollbar::-webkit-scrollbar{width:0;height:0;display:none}
