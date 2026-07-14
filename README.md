@@ -16,11 +16,15 @@ Completed** as the queue drains.
 
 ## Download
 
-Grab the latest build for your OS from the **[Releases page](https://github.com/petarbeck/ultraprompt/releases/latest)**:
+Get the latest build from the **[Releases page →](https://github.com/petarbeck/ultraprompt/releases/latest)** — macOS is signed + notarized (opens with no Gatekeeper prompt):
 
-- **macOS** — `Ultraprompt_*_universal.dmg` (universal, signed + notarized). Open it and drag Ultraprompt to Applications.
-- **Windows** — the `_x64-setup.exe` (NSIS) or `.msi` installer.
-- **Linux** — the portable `.AppImage` (`chmod +x` then run), or a `.deb` / `.rpm` for your package manager.
+| Platform | File to grab |
+|---|---|
+| **macOS** (Apple Silicon + Intel) | `Ultraprompt_*_universal.dmg` — open it, drag Ultraprompt to Applications |
+| **Windows** | `Ultraprompt_*_x64-setup.exe` (installer) or `Ultraprompt_*_x64_en-US.msi` |
+| **Linux** — Debian/Ubuntu | `Ultraprompt_*_amd64.deb` |
+| **Linux** — Fedora/RHEL | `Ultraprompt-*.x86_64.rpm` |
+| **Linux** — portable | `Ultraprompt_*_amd64.AppImage` (`chmod +x`, then run) |
 
 Prefer to build it yourself? See [Install & run from source](#install--run-from-source).
 

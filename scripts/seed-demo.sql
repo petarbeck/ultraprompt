@@ -3,8 +3,8 @@
 -- SAFE: this only INSERTs data; it never creates or alters the schema, and it is meant
 -- to be run against a DEMO build's database, NOT your real one. Your personal DB lives at
 --   ~/Library/Application Support/at.ultraprompt/ultraprompt.db
--- To keep it untouched, build a demo variant with a different bundle identifier (see
--- RELEASE.md → "Demo data for screenshots"); that variant gets its own app-data dir and
+-- To keep it untouched, build a demo variant with a different bundle identifier (set
+-- `identifier` to `at.ultraprompt.demo` in src-tauri/tauri.conf.json); that variant gets its own app-data dir and
 -- its own fresh DB (with migrations already applied), and you run this against THAT file.
 --
 -- Usage (against the demo build's DB, after launching it once so the schema exists):

@@ -26,6 +26,7 @@
   "bundle": {
     "active": true,
     "targets": "all",
+    "category": "DeveloperTools",
     "shortDescription": "Prompt orchestration tool for multi-agentic workflow",
     "longDescription": "Prompt orchestration tool for multi-agentic workflow",
     "icon": [

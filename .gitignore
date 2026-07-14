@@ -29,6 +29,13 @@ src-tauri/gen/
 .env.*
 !.env.example
 
+# Local signing / App Store assets — certs, provisioning profiles, packages.
+# NEVER commit these (private keys + signing material).
+.appstore/
+*.provisionprofile
+*.p12
+*.cer
+
 # OS / editor
 .DS_Store
 .idea/
@@ -43,9 +50,12 @@ src-tauri/gen/
 # SDD progress ledger (scratch)
 .superpowers/
 
-# Internal design/plan/deferred-work notes — kept local, out of the public repo
+# Internal dev notes + release runbook — kept local, out of the public repo
 docs/superpowers/
 TODO.md
+INTERNAL.md
+RELEASE.md
+scripts/build-mas.sh
 
 # Throwaway Playwright + sql.js verification harness (not shipped)
 .harness/
